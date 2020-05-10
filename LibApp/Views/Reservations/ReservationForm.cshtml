@@ -1,0 +1,65 @@
+﻿@model LibApp.ViewModels.NewReservationViewModel
+<br />
+<h2>New Reservation</h2>
+<br />
+
+<div class="border container" style="padding: 30px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-3">
+                    <label asp-for="@Model.Books.First().Name">Name of the Book</label>
+                </div>
+                <div id="selectBook" class="col-6">
+                    <select asp-for="BookId" class="form-control js-example-basic-single" asp-items="@(Model.SelectList)"></select>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-3">
+                    <label asp-for="@Model.Clients.First().Name">Client</label>
+                </div>
+                <div class="col-6">
+                    <select id="selectClients" asp-for="ClientId" class="form-control"
+                            asp-items="@(new SelectList(Model.Clients, "Id", "Name"))"></select>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-3">
+                    <label asp-for="@Model.TargetDate">Target Date</label>
+                </div>
+                <div class="col-3">
+                    <input asp-for="TargetDate" class="form-control" type="text" id="datePicker" />
+                </div>
+                <div class="col-4">
+                    <span class="text-danger" asp-validation-for="@Model.TargetDate"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="offset-3 col-3">
+                    <input type="submit" value="Submit Reservation" class="btn btn-success form-control" />
+                </div>
+                <div class="col-3">
+                    <a href="/Books/Index" class="btn btn-info form-control">Back To Book List</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".js-example-basic-single").select2();
+            $("#selectClients").select2();
+            $("#datePicker").datepicker({
+                dateFormat: "yy-mm-dd"
+            });
+            $("#selectBook select").val("@Model.BookId.ToString()")
+        });
+    </script>
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}
+
