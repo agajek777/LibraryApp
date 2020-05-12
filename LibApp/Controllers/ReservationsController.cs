@@ -39,15 +39,15 @@ namespace LibApp.Controllers
             var clients = await _db.Clients.OrderBy(c => c.Id).ToListAsync();
             if (id == null)
             {
-                return View("ReservationForm", new NewReservationViewModel() { SelectList = new SelectList(booksNAuthors, "Id", "Description"), Clients = clients, Books = books });
+                return View("ReservationForm", new NewReservationViewModel() { SelectList = new SelectList(booksNAuthors, "Id", "Description"), Clients = clients, Books = books, TargetDate = DateTime.Now});
             }
             else if (books.Count(b => b.Id == id) == 1)
             {
-                return View("ReservationForm", new NewReservationViewModel() { SelectList = new SelectList(booksNAuthors, "Id", "Description"), Clients = clients, Books = books, BookId = (int)id });
+                return View("ReservationForm", new NewReservationViewModel() { SelectList = new SelectList(booksNAuthors, "Id", "Description"), Clients = clients, Books = books, BookId = (int)id, TargetDate = DateTime.Now });
             }
             else
             {
-                return View("ReservationForm", new NewReservationViewModel() { SelectList = new SelectList(booksNAuthors, "Id", "Description"), Clients = clients, Books = books });
+                return View("ReservationForm", new NewReservationViewModel() { SelectList = new SelectList(booksNAuthors, "Id", "Description"), Clients = clients, Books = books, TargetDate = DateTime.Now });
             }
         }
 
