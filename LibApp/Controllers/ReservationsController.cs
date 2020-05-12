@@ -51,6 +51,11 @@ namespace LibApp.Controllers
             }
         }
 
+        public IActionResult Active()
+        {
+            return View();
+        }
+
         [HttpPost]
         public async Task<IActionResult> New(NewReservationViewModel model)
         {
@@ -69,5 +74,28 @@ namespace LibApp.Controllers
 
             return RedirectToAction("New", new { Id = model.BookId });
         }
+
+        #region API Calls
+
+        [HttpGet]
+        public async Task<IActionResult> GetActive()
+        {
+            return Json(new { data = await _db.Reservations.Include(r => r.Client).Include(r => r.Book).Where(r => r.TargetDate >= DateTime.Now).ToListAsync() });
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var reservationInDb = await _db.Reservations.SingleOrDefaultAsync(r => r.Id == id);
+            if (reservationInDb != null)
+            {
+                _db.Reservations.Remove(reservationInDb);
+                _db.SaveChanges();
+                return Json(new { success = true, message = "The Reservation has been terminated."});
+            }
+            return Json(new { success = false, message = "Error while deleting" });
+        }
+
+        #endregion
     }
 }
