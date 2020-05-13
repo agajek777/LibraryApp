@@ -81,6 +81,7 @@ namespace LibApp.Controllers
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
+            //Func<Book, bool> func = b => b.Id == id;
             var bookInDb = await _db.Books.FirstOrDefaultAsync(b => b.Id == id);
             if (bookInDb == null)
                 return Json(new { success = false, message = "Error while deleting" });

@@ -408,7 +408,6 @@ C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Areas\
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Books\BookForm.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Books\Index.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Reservations\ReservationForm.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -425,3 +424,4 @@ C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\staticwebass
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\LibApp.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\LibApp.pdb
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\LibApp.genruntimeconfig.cache
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Reservations\Active.cshtml.g.cs
