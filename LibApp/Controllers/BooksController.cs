@@ -7,6 +7,7 @@ using LibApp.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 
 namespace LibApp.Controllers
 {
@@ -88,6 +89,20 @@ namespace LibApp.Controllers
             _db.Books.Remove(bookInDb);
             await _db.SaveChangesAsync();
             return Json(new { success = true, message = "Delete successful" });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Book book)
+        {
+            var bookInDb = await _db.Books.SingleOrDefaultAsync(b => b.Id == book.Id);
+            if (bookInDb == null)
+            {
+                return Json(new { success = false, Message = "Error while editing" });
+            }
+            else
+            {
+                return NotFound();
+            }
         }
         #endregion
     }

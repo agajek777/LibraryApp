@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jgjcXFl9/fCRb/jkZbaBFN2FiLqpFSMgqfI9vYe5pADHQ6ORtIR4YeRbwG4LfoWM/7pM+C+gXogWPsNVC/igcA==",
+  "dgSpecHash": "aa9+1RtSGIIysO1qCmACvchBNCSFuJ+8xeaJBiLWi/T15RTx3W6iLPWhARhaf6YfojoFYZIj9qq5dkjMPpPa/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\adamg\\source\\repos\\LibApp\\LibApp\\LibApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\adamg\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\adamg\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\adamg\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\adamg\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
