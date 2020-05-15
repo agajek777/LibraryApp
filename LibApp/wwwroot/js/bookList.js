@@ -29,7 +29,7 @@ function loadDataTable() {
                         </a>
                         &nbsp;
                         <a class="btn btn-danger text-white" style="cursor:pointer; width:100px;"
-                            onclick=Delete('/books/delete?id='+${data})>
+                            onclick=Delete('/books/deletebook?id='+${data})>
                             Delete
                         </a>
                         </div>`

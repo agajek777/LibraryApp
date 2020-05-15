@@ -422,3 +422,7 @@ C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Bo
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Books\Index.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Reservations\ReservationForm.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Reservations\Active.cshtml.g.cs
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.csproj.CoreCompileInputs.cache
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\AutoMapper.dll
