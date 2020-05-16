@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using LibApp.Models;
 using AutoMapper;
 using LibApp.Models.Dto;
+using Microsoft.OpenApi.Models;
 
 namespace LibApp
 {
@@ -41,6 +42,11 @@ namespace LibApp
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
+            });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
 
             IMapper mapper = mappingConfig.CreateMapper();
@@ -82,6 +88,12 @@ namespace LibApp
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
             app.UseRouting();
 
