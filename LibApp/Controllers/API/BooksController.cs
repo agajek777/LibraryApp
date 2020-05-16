@@ -76,11 +76,11 @@ namespace LibApp.Controllers.API
             var bookInDb = await _db.Books.SingleOrDefaultAsync(b => b.Id == id);
             if (id == null || bookInDb == null)
             {
-                return BadRequest();
+                return Json(new { success = false, message = "Error while deleting."});
             }
-            _db.Remove(bookInDb);
+            _db.Books.Remove(bookInDb);
             await _db.SaveChangesAsync();
-            return Ok();
+            return Json(new { success = true, message = "Delete successful."});
         }
     }
 }

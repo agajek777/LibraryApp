@@ -55,11 +55,11 @@ namespace LibApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Books.Update(Book);
+                _db.Books.Update(book);
                 await _db.SaveChangesAsync();
                 return RedirectToAction("Index", "Books");
             }
-            return View("BookForm", Book);
+            return View("BookForm", book);
         }
         [ValidateAntiForgeryToken]
         [HttpPost]
