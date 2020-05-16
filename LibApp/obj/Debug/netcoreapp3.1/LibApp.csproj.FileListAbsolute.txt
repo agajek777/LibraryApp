@@ -222,7 +222,6 @@ C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Ap
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Buffers.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Collections.Concurrent.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Collections.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Collections.Immutable.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Collections.NonGeneric.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Collections.Specialized.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Annotations.dll
@@ -239,7 +238,6 @@ C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Da
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Data.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Contracts.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Debug.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.DiagnosticSource.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.FileVersionInfo.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Process.dll
@@ -423,12 +421,5 @@ C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Bo
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Reservations\ReservationForm.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Reservations\Active.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\AutoMapper.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\System.Web.Http.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\System.Web.Http.WebHost.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\WebActivatorEx.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.csproj.CoreCompileInputs.cache
-C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
