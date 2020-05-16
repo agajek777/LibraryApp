@@ -70,5 +70,17 @@ namespace LibApp.Controllers.API
             await _db.SaveChangesAsync();
             return Json(new { data = _mapper.Map<BookDto>(bookInDb) });
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteBook(int? id)
+        {
+            var bookInDb = await _db.Books.SingleOrDefaultAsync(b => b.Id == id);
+            if (id == null || bookInDb == null)
+            {
+                return BadRequest();
+            }
+            _db.Remove(bookInDb);
+            await _db.SaveChangesAsync();
+            return Ok();
+        }
     }
 }

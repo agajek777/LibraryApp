@@ -61,7 +61,7 @@ namespace LibApp.Controllers
             }
             return View("BookForm", Book);
         }
-
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public async Task<IActionResult> New(Book Book)
         {

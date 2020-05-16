@@ -31,7 +31,7 @@
                     <label asp-for="@Model.TargetDate">Target Date</label>
                 </div>
                 <div class="col-3">
-                    <input asp-for="TargetDate" class="form-control" type="text" id="datePicker" />
+                    <input onkeydown="return false" asp-for="TargetDate" class="form-control" type="text" id="datePicker" />
                 </div>
                 <div class="col-4">
                     <span class="text-danger" asp-validation-for="@Model.TargetDate"></span>
@@ -55,7 +55,8 @@
             $(".js-example-basic-single").select2();
             $("#selectClients").select2();
             $("#datePicker").datepicker({
-                dateFormat: "yy-mm-dd"
+                dateFormat: "yy-mm-dd",
+                minDate: 0
             });
             $("#selectBook select").val("@Model.BookId.ToString()")
         });
