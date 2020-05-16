@@ -1,3 +1,7 @@
+(!!!) User to gain access:
+email: admin@admin.pl
+password: #Admin123
+
 Application built to make managing the library easier.
 
 It is a project based on a MVC logic, making use of Razor Pages. DataBase created with Entity Framework Migrations (code first approach). 
