@@ -52,6 +52,7 @@ namespace LibApp
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
 
+            //services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
             services.Configure<IdentityOptions>(options => {
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;

@@ -430,3 +430,4 @@ C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.csprojA
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.csproj.CoreCompileInputs.cache
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
