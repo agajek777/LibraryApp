@@ -1,0 +1,46 @@
+﻿@model LibApp.ViewModels.LoginViewModel
+<h1>Login</h1>
+<div class="border container" style="padding: 30px;">
+    <form method="post">
+        <div class="text-danger col-6" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="@Model.Email"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="@Model.Email" class="form-control" type="email" />
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="@Model.Password"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="@Model.Password" class="form-control" type="password" />
+                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            @*<div class="col-3">
+                <label asp-for="@Model.RememberMe"></label>
+            </div>*@
+            <div class="col-6 offset-3 form-check">
+                <input asp-for="@Model.RememberMe" />
+                <label asp-for="@Model.RememberMe">
+
+                </label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <button type="submit" class="btn btn-success form-control">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}
+
+

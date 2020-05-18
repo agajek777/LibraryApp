@@ -25,10 +25,6 @@ namespace LibApp.Controllers
         }
         public IActionResult Index()
         {
-            if (true)
-            {
-
-            }
             return View();
         }
 
@@ -76,23 +72,23 @@ namespace LibApp.Controllers
 
 
         #region API Calls
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            return Json(new { data = await _db.Books.ToListAsync() });
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> GetAll()
+        //{
+        //    return Json(new { data = await _db.Books.ToListAsync() });
+        //}
 
-        [HttpDelete]
-        public async Task<IActionResult> DeleteBook(int id)
-        {
-            //Func<Book, bool> func = b => b.Id == id;
-            var bookInDb = await _db.Books.FirstOrDefaultAsync(b => b.Id == id);
-            if (bookInDb == null)
-                return Json(new { success = false, message = "Error while deleting" });
-            _db.Books.Remove(bookInDb);
-            await _db.SaveChangesAsync();
-            return Json(new { success = true, message = "Delete successful" });
-        }
+        //[HttpDelete]
+        //public async Task<IActionResult> DeleteBook(int id)
+        //{
+        //    //Func<Book, bool> func = b => b.Id == id;
+        //    var bookInDb = await _db.Books.FirstOrDefaultAsync(b => b.Id == id);
+        //    if (bookInDb == null)
+        //        return Json(new { success = false, message = "Error while deleting" });
+        //    _db.Books.Remove(bookInDb);
+        //    await _db.SaveChangesAsync();
+        //    return Json(new { success = true, message = "Delete successful" });
+        //}
 
         //[HttpPost]
         //public async Task<IActionResult> EditBook(BookDto bookDto)

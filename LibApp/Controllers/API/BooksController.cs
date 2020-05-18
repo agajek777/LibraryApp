@@ -12,12 +12,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LibApp.Controllers.API
 {
+    //public delegate bool MyDel(Book book, int id);
+
+
     [Route("api/[controller]")]
     [ApiController]
     public class BooksController : Controller
     {
         private readonly ApplicationDbContext _db;
         private readonly IMapper _mapper;
+        //private MyDel myDel;
         public BooksController(ApplicationDbContext db, IMapper mapper)
         {
             _db = db;
@@ -32,6 +36,7 @@ namespace LibApp.Controllers.API
         [HttpGet("{id}")]
         public async Task<IActionResult> GetBook(int id)
         {
+            //myDel = (Book b, int id) => b.Id == id;
             var book = await _db.Books.SingleOrDefaultAsync(b => b.Id == id);
             if (book == null)
                 return NotFound();
