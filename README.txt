@@ -11,9 +11,11 @@ Layout bulit using Bootstrap, JavaScript, CSS, HTML, JQuery, Toastr.js, sweetAle
 Summary, what I have used:
 - .Net Core 3.1 / C#
 - Entity Framework Core (Code First)
-- Identity
+- .Net Core Identity
 - Razor Pages
 - MVC
+- WEB API
+- Swagger UI
 - JavaScript
 - JQuery
 - CSS
