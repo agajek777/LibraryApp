@@ -1,12 +1,10 @@
 ﻿@model LibApp.ViewModels.NewReservationViewModel
-@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
+@*@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager*@
 
 <br />
 <h2>New Reservation</h2>
 <br />
-@if (SignInManager.IsSignedIn(User))
-{
     <div class="border container" style="padding: 30px">
         <form method="post">
             <div class="text-danger" asp-validation-summary="ModelOnly"></div>
@@ -53,28 +51,17 @@
             </div>
         </form>
     </div>
-    @section Scripts {
-        <script>
-        $(document).ready(function () {
-            $(".js-example-basic-single").select2();
-            $("#selectClients").select2();
-            $("#datePicker").datepicker({
-                dateFormat: "yy-mm-dd",
-                minDate: 0
-            });
-            $("#selectBook select").val("@Model.BookId.ToString()")
+@section Scripts {
+    <script>
+    $(document).ready(function () {
+        $(".js-example-basic-single").select2();
+        $("#selectClients").select2();
+        $("#datePicker").datepicker({
+            dateFormat: "yy-mm-dd",
+            minDate: 0
         });
-        </script>
-        <partial name="_ValidationScriptsPartial.cshtml" />
-    }
-}
-else
-{
-    <br />
-    <br />
-    <br />
-    <div class="container text-center">
-        <h2>You need to be Signed In</h2>
-        <h6>to enter the Reservation Form.</h6>
-    </div>
+        $("#selectBook select").val("@Model.BookId.ToString()")
+    });
+    </script>
+    <partial name="_ValidationScriptsPartial.cshtml" />
 }

@@ -16,6 +16,8 @@ using LibApp.Models;
 using AutoMapper;
 using LibApp.Models.Dto;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace LibApp
 {
@@ -36,8 +38,18 @@ namespace LibApp
                     Configuration.GetConnectionString("NewConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.ConfigureApplicationCookie(options => options.LoginPath = "/account/login");
+            services.ConfigureApplicationCookie(options => options.LogoutPath = "/account/logout");
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddMvc(options =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                                .RequireAuthenticatedUser()
+                                .Build();
+                options.Filters.Add(new AuthorizeFilter(policy));
+            });
 
             var mappingConfig = new MapperConfiguration(mc =>
             {

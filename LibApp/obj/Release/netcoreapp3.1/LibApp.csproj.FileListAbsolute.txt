@@ -124,7 +124,6 @@ C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Buffers.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Collections.Concurrent.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Collections.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Collections.Immutable.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Collections.NonGeneric.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Collections.Specialized.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.ComponentModel.Annotations.dll
@@ -141,7 +140,6 @@ C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Data.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Diagnostics.Contracts.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Diagnostics.Debug.dll
-C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Diagnostics.DiagnosticSource.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Diagnostics.FileVersionInfo.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\refs\System.Diagnostics.Process.dll
@@ -425,3 +423,12 @@ C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\LibApp.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\LibApp.pdb
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\LibApp.genruntimeconfig.cache
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Reservations\Active.cshtml.g.cs
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\AutoMapper.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs

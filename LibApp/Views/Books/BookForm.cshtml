@@ -1,11 +1,9 @@
 ﻿@model LibApp.Models.Book
-@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
+@*@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager*@
 <br />
 <h2>@(Model.Id == 0 ? "New" : "Edit") Book</h2>
 <br />
-@if (SignInManager.IsSignedIn(User))
-{
     <div class="border container" style="padding: 30px">
         <form method="post">
             @if (Model.Id != 0)
@@ -61,17 +59,6 @@
             </div>
         </form>
     </div>
-    @section Scripts {
-        <partial name="_ValidationScriptsPartial.cshtml" />
-    }
-}
-else
-{
-    <br />
-    <br />
-    <br />
-    <div class="container text-center">
-        <h2>You need to be Signed In</h2>
-        <h6>to enter the Book Form.</h6>
-    </div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial.cshtml" />
 }

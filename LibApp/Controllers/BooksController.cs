@@ -6,6 +6,7 @@ using AutoMapper;
 using LibApp.Data;
 using LibApp.Models;
 using LibApp.Models.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +28,6 @@ namespace LibApp.Controllers
         {
             return View();
         }
-
         public async Task<IActionResult> Edit(int id)
         {
             var book = await _db.Books.FindAsync(id);
@@ -38,7 +38,6 @@ namespace LibApp.Controllers
 
             return View("BookForm", book);
         }
-
         public IActionResult New()
         {
             var book = new Book();
