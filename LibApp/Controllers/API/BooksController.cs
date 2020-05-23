@@ -6,7 +6,9 @@ using AutoMapper;
 using LibApp.Data;
 using LibApp.Models;
 using LibApp.Models.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,11 +23,14 @@ namespace LibApp.Controllers.API
     {
         private readonly ApplicationDbContext _db;
         private readonly IMapper _mapper;
+        private readonly SignInManager<IdentityUser> _singInManager;
+
         //private MyDel myDel;
-        public BooksController(ApplicationDbContext db, IMapper mapper)
+        public BooksController(ApplicationDbContext db, IMapper mapper, SignInManager<IdentityUser> singInManager)
         {
             _db = db;
             _mapper = mapper;
+            _singInManager = singInManager;
         }
         // GET api/books/
         [HttpGet]
@@ -79,7 +84,7 @@ namespace LibApp.Controllers.API
         public async Task<IActionResult> DeleteBook(int? id)
         {
             var bookInDb = await _db.Books.SingleOrDefaultAsync(b => b.Id == id);
-            if (id == null || bookInDb == null)
+            if (id == null || bookInDb == null || !_singInManager.IsSignedIn(User))
             {
                 return Json(new { success = false, message = "Error while deleting." });
             }

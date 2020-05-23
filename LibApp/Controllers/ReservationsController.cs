@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using LibApp.Data;
 using LibApp.Models;
 using LibApp.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,7 @@ namespace LibApp.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public async Task<IActionResult> New(int? id)
         {
             var books = await _db.Books.ToListAsync();
@@ -57,6 +58,7 @@ namespace LibApp.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> New(NewReservationViewModel model)
         {
             if (ModelState.IsValid)

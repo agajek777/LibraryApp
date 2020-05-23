@@ -28,6 +28,7 @@ namespace LibApp.Controllers
         {
             return View();
         }
+        [Authorize]
         public async Task<IActionResult> Edit(int id)
         {
             var book = await _db.Books.FindAsync(id);
@@ -38,6 +39,7 @@ namespace LibApp.Controllers
 
             return View("BookForm", book);
         }
+        [Authorize]
         public IActionResult New()
         {
             var book = new Book();
@@ -46,6 +48,7 @@ namespace LibApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(Book book)
         {
             if (ModelState.IsValid)
@@ -58,6 +61,7 @@ namespace LibApp.Controllers
         }
         [ValidateAntiForgeryToken]
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> New(Book Book)
         {
             if (ModelState.IsValid)
