@@ -42,6 +42,7 @@ namespace LibApp
             services.ConfigureApplicationCookie(options => options.LogoutPath = "/account/logout");
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddSignalR();
 
             //services.AddMvc(options =>
             //{
@@ -113,12 +114,14 @@ namespace LibApp
             app.UseAuthentication();
             app.UseAuthorization();
 
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapHub<ChatHub>("/chat");
             });
         }
     }
