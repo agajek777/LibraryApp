@@ -432,3 +432,6 @@ C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\System.Colle
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\libman.json
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Home\Chat.cshtml.g.cs
