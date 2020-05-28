@@ -431,7 +431,10 @@ C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Ac
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Chat.cshtml.g.cs
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.csproj.CoreCompileInputs.cache
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\LibApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\adamg\source\repos\LibApp\LibApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Chat.cshtml.g.cs

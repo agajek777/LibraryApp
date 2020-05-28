@@ -40,7 +40,8 @@ namespace LibApp
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.ConfigureApplicationCookie(options => options.LoginPath = "/account/login");
             services.ConfigureApplicationCookie(options => options.LogoutPath = "/account/logout");
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddRazorPages();
             services.AddSignalR();
 
