@@ -36,7 +36,7 @@ namespace LibApp
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("NewConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.ConfigureApplicationCookie(options => options.LoginPath = "/account/login");
             services.ConfigureApplicationCookie(options => options.LogoutPath = "/account/logout");

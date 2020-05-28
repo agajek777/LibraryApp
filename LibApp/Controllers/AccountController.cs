@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LibApp.Models;
 using LibApp.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -11,10 +12,10 @@ namespace LibApp.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _singInManager;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _singInManager;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> singInManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> singInManager)
         {
             this._userManager = userManager;
             this._singInManager = singInManager;
@@ -47,7 +48,7 @@ namespace LibApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser() { UserName = model.Email, Email = model.Email };
+                var user = new AppUser() { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)

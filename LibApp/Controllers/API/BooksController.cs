@@ -23,10 +23,10 @@ namespace LibApp.Controllers.API
     {
         private readonly ApplicationDbContext _db;
         private readonly IMapper _mapper;
-        private readonly SignInManager<IdentityUser> _singInManager;
+        private readonly SignInManager<AppUser> _singInManager;
 
         //private MyDel myDel;
-        public BooksController(ApplicationDbContext db, IMapper mapper, SignInManager<IdentityUser> singInManager)
+        public BooksController(ApplicationDbContext db, IMapper mapper, SignInManager<AppUser> singInManager)
         {
             _db = db;
             _mapper = mapper;
