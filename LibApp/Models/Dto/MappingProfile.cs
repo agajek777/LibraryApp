@@ -18,6 +18,12 @@ namespace LibApp.Models.Dto
 
             CreateMap<Reservation, ReservationDto>();
             CreateMap<ReservationDto, Reservation>();
+
+            CreateMap<AppUser, AppUserDto>();
+            CreateMap<AppUserDto, AppUser>();
+
+            CreateMap<Message, MessageDto>();
+            CreateMap<MessageDto, Message>();
         }
     }
 }
