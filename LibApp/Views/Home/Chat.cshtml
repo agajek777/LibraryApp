@@ -1,8 +1,15 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<AppUser> SignInManager
 @inject UserManager<AppUser> UserManager
+@model List<Message>
 <div class="row-6">
     <ul id="messagesList"></ul>
+    @foreach (var msg in Model)
+    {
+        <li>
+            @(msg.AppUser.UserName): @(msg.Text)
+        </li>
+    }
 </div>
 <div class="row">
     <div class="col-12">
