@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using LibApp.Data;
+using LibApp.Models;
 using LibApp.Models.Dto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,6 +29,19 @@ namespace LibApp.Controllers.API
         {
             var msgs = await _db.Messages.OrderBy(m => m.Sent).Include(m => m.AppUser).Select(m => _mapper.Map<MessageDto>(m)).ToListAsync();
             return Json(new { data = msgs });
+        }
+        [HttpPost]
+        public async Task<JsonResult> NewMessage(MessageDto messageDto)
+        {
+            if (ModelState.IsValid)
+            {
+                var msg = _mapper.Map<Message>(messageDto);
+                msg.AppUser = await _db.Users.FindAsync(msg.AppUser.Id);
+                await _db.Messages.AddAsync(msg);
+                await _db.SaveChangesAsync();
+                return Json(new { success = true });
+            }
+            return Json(new { success = false });
         }
     }
 }
