@@ -5,7 +5,11 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chat").build();
 //Disable send button until connection is established
 document.getElementById("sendButton").disabled = true;
 
-var timer;
+function getDate() {
+    var today = new Date().toISOString().slice(0, 10);
+    today += ('T' + Date.prototype.getHours().toString() + ':' + Date.prototype.getMinutes().toString() + Date.prototype.getMinutes().toString());
+    return today;
+}
 
 connection.on("ReceiveMessage", function (user, message) {
     var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -22,7 +26,6 @@ connection.start().then(function () {
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
-    timer = 0;
     var user = document.getElementById("userInput").value;
     var message = document.getElementById("messageInput").value;
     if (user == "" || message == "") {
@@ -33,6 +36,28 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         return console.error(err.toString());
     });
     event.preventDefault();
+
+    var date;
+    date = new Date().toISOString().slice(0, 19);
+
+    var data = {
+        text: message,
+        sent: date,
+        appUser: {
+            userName: user
+        }
+    };
+
+    data = JSON.stringify(data);
+
+    var response = fetch('/api/messages', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: data
+    }).then(response => response.json()).then(console.log(response));
 
     document.getElementById("sendButton").disabled = true;
     setTimeout(function () {
