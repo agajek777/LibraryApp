@@ -36,7 +36,7 @@ namespace LibApp.Controllers.API
             if (ModelState.IsValid)
             {
                 var msg = _mapper.Map<Message>(messageDto);
-                msg.AppUser = await _db.Users.FindAsync(msg.AppUser.Id);
+                msg.AppUser = await _db.Users.FirstOrDefaultAsync(u => u.UserName == msg.AppUser.UserName);
                 await _db.Messages.AddAsync(msg);
                 await _db.SaveChangesAsync();
                 return Json(new { success = true });
