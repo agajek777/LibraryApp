@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using LibApp.Models;
 using LibApp.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibApp.Controllers
 {
@@ -26,12 +27,17 @@ namespace LibApp.Controllers
         {
             return View();
         }
-
         public async Task<IActionResult> Chat()
+        {
+            var msgs = await _db.Messages.Include(m => m.AppUser).OrderBy(m => m.Sent).ToListAsync();
+            return View("ChatRoom", msgs);
+        }
+        public async Task<IActionResult> ChatRoom()
         {
             var msgs = await _db.Messages.Include(m => m.AppUser).OrderBy(m => m.Sent).ToListAsync();
             return View(msgs);
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

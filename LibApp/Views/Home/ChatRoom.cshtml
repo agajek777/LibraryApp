@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+@model List<Message>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChatRoom</title>
+    <link rel="stylesheet" href="~/css/Chat.css" />
+</head>
+<body>
+    <div class="main">
+        <div class="side-menu">
+            <a class="side-button" href="#">Back to the LibApp</a>
+        </div>
+        <div class="chat">
+            <div class="chat-body" id="messagesList">
+                @foreach (var msg in Model)
+                {
+                    <div class="message">
+                        <header>@(msg.AppUser.UserName)</header>
+                        <p>@(msg.Text)</p>
+                        <footer>
+                            @if (msg.Sent <= DateTime.Now.AddDays(-1))
+                            {
+                                @msg.Sent.ToShortDateString()
+                            }
+                            else
+                            {
+                                @msg.Sent.ToShortTimeString();
+                            }
+                        </footer>
+                    </div>
+                }
+            </div>
+            <div class="chat-input">
+                <button type="button" id="sendButton">Send</button>
+                <input id="messageInput" type="text" />
+                <label id="userInput" hidden>@User.Identity.Name</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
