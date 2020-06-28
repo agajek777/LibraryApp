@@ -13,10 +13,21 @@ function getDate() {
 
 connection.on("ReceiveMessage", function (user, message) {
     var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    var encodedMsg = user + ": " + msg;
-    var li = document.createElement("li");
-    li.textContent = encodedMsg;
-    document.getElementById("messagesList").appendChild(li);
+
+    var divMsg = document.createElement("div");
+    divMsg.setAttribute('class', 'message');
+    var header = document.createElement('header');
+    header.innerHTML = user;
+    var p = document.createElement('p');
+    p.innerHTML = msg;
+    var footer = document.createElement('footer');
+    footer.innerHTML = new Date().toISOString().slice(11, 16);;
+
+    divMsg.appendChild(header);
+    divMsg.appendChild(p);
+    divMsg.appendChild(footer);
+
+    document.getElementById("messagesList").appendChild(divMsg);
 });
 
 connection.start().then(function () {
@@ -26,7 +37,7 @@ connection.start().then(function () {
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
-    var user = document.getElementById("userInput").value;
+    var user = document.getElementById("userInput").innerHTML;
     var message = document.getElementById("messageInput").value;
     if (user == "" || message == "") {
         toastr.error("Fill in the Message field");
@@ -58,6 +69,8 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         },
         body: data
     }).then(response => response.json()).then(console.log(response));
+
+    document.getElementById('messageInput').value = "";
 
     document.getElementById("sendButton").disabled = true;
     setTimeout(function () {

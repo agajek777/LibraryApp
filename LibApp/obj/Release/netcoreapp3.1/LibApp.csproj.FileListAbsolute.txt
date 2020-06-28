@@ -438,3 +438,4 @@ C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\adamg\source\repos\LibApp\LibApp\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\adamg\source\repos\LibApp\LibApp\obj\Release\netcoreapp3.1\Razor\Views\Home\ChatRoom.cshtml.g.cs

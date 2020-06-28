@@ -101,10 +101,7 @@
 
 .chat-input > button {
     flex-grow: 2;
-    color: white;
     margin: 1rem 1rem 1rem 1rem;
-    background-color: #303033;
-    border-radius: 5px;
 }
 
 .chat-input > input {
